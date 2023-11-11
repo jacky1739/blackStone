@@ -5,12 +5,6 @@ import { User } from './user/models/user.entity';
 
 @Controller()
 export class AppController {
-  //constructor(private readonly appService: AppService) {} // 先將service注入進來
-
-  // @Get()
-  // getHello(): string {
-  //   return this.appService.getHello();
-  // }
   constructor(private readonly userService: UserService) {}
 
   @Get('/create')

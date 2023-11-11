@@ -7,6 +7,6 @@ import { UserService } from './user.service';
 @Module({
   imports: [TypeOrmModule.forFeature([User])],
   providers: [ConsoleLogger, UserService],
-  exports: [UserService],
+  exports: [UserService], // 必須在這export出去, app.controller才能調用到UserService
 })
 export class UserModule {}
