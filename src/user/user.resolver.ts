@@ -14,6 +14,6 @@ export class UserResolver {
 
   @Query(() => UserType) // 查詢
   async find(@Args('id') id: string): Promise<UserType> {
-    return await this.userService.find(id)
+    return await this.userService.find(id);
   }
 }
