@@ -12,7 +12,7 @@ export class UserResolver {
     return await this.userService.create(params);
   }
 
-  @Query(() => UserType) // 查詢
+  @Query(() => UserType, { description: '使用ID查詢用戶' }) // 查詢
   async find(@Args('id') id: string): Promise<UserType> {
     return await this.userService.find(id);
   }
