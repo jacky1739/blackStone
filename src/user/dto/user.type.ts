@@ -1,5 +1,6 @@
 import { Field ,ObjectType } from "@nestjs/graphql";
 
+// 輸出類型
 @ObjectType()
 export class UserType {
   @Field()
